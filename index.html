@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram Token Viewer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        text-align: center;
+      }
+      #copyButton {
+        display: block;
+        width: 80%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      #copyButton:hover {
+        background-color: #0056b3;
+      }
+      #tokenInput {
+        display: block;
+        width: 80%;
+        max-width: 500px;
+        height: 100px;
+        margin: 10px auto 0 auto;
+        padding: 10px;
+        font-size: 1.2em;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        resize: none; /* Prevent resizing */
+      }
+      #noTokenMessage {
+        color: red;
+        margin-top: 20px;
+      }
+      #telegramLink {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      }
+      #telegramLink:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Telegram WebApp Token Viewer</h1>
+    <p>Your Telegram token will be displayed below if available:</p>
+
+    <button id="copyButton">Copy Token</button>
+    <textarea
+      id="tokenInput"
+      readonly
+      placeholder="Token will appear here..."
+    ></textarea>
+
+    <p id="noTokenMessage" style="display: none">
+      No token is available. Please open this page using the Telegram bot:
+      <a id="telegramLink" href="https://t.me/<YourBotUsername>" target="_blank"
+        >Open Telegram Bot</a
+      >
+    </p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
